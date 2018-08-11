@@ -7,6 +7,7 @@ kubectl get deployments<br />
 kubectl proxy<br />
 <br />
 Get pod name:<br />
-export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')
+export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')<br />
 echo Name of the Pod: $POD_NAME<br />
+curl http://localhost:8001/api/v1/namespaces/default/pods/$POD_NAME/proxy/<br />
 
