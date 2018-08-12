@@ -1,5 +1,5 @@
 kubectl get services<br />
-### Exposes traffic on port 8080 to public:
+### Exposes traffic on port 8080 to public (creates a service):
 kubectl expose deployment/kubernetes-bootcamp --type="NodePort" --port 8080<br /> 
 ### NodePort is the public port 8080 is NATed to:
 kubectl describe services/kubernetes-bootcamp<br />
@@ -16,3 +16,16 @@ echo Name of the Pod: $POD_NAME<br />
 kubectl label pod $POD_NAME app=v1<br />
 ### Delete service:
 kubectl delete service -l run=kubernetes-bootcamp
+
+
+### What is a Service?
+
+A Kubernetes Service is an abstraction layer which defines a logical set of Pods
+
+### How can you create a Service?
+
+With "kubectl expose"
+
+### What is a Label in Kubernetes?
+
+A way to group related things using key/value pairs
