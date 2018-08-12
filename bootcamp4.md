@@ -1,5 +1,5 @@
 kubectl get services<br />
-# exposes traffic on port 8080 to public
+### exposes traffic on port 8080 to public
 kubectl expose deployment/kubernetes-bootcamp --type="NodePort" --port 8080<br /> 
 # NodePort is the public port 8080 is NATed to
 kubectl describe services/kubernetes-bootcamp<br />
