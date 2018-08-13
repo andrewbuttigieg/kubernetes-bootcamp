@@ -3,5 +3,5 @@ kubectl run kubernetes-ha-nodejs --image=andrewbuttigieg/ha-nodejs:latest --port
 kubectl proxy
 kubectl expose deployment/kubernetes-ha-nodejs --type="NodePort" --port 8080
 kubectl describe services (for port number)
-echo minikube ip (for ip)
+echo $(minikube ip) (for ip)
 curl 192.168.99.100:30407
