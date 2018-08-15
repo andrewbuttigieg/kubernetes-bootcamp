@@ -1,0 +1,7 @@
+minikube start
+kubectl run kubernetes-aspnetapp --image=andrewbuttigieg/aspnetapp:v2 --port=80
+kubectl proxy
+kubectl expose deployment/kubernetes-aspnetapp --type="NodePort" --port 80
+kubectl describe services (for port number)
+echo $(minikube ip) (for ip)
+curl 192.168.99.101:32435
